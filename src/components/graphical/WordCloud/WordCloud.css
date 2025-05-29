@@ -1,0 +1,32 @@
+.word-cloud
+{
+	display: flex;
+	margin: auto;
+	text-align: center;
+	width: 100%;
+	max-width: 300px;
+	text-wrap: wrap;
+	height: 100%;
+	list-style: none;
+	padding-left: 0;
+
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	line-height: 2.5rem;
+}
+
+.word-cloud li
+{
+	--size: attr(data-weight number, 2);
+	font-size: calc(var(--size) * 1rem);
+	transition: scale 0.3s ease;
+	margin-top: 0.5rem;
+	color: white;
+	margin-left: 0.5rem;
+}
+
+.word-cloud li:hover
+{
+	scale: 1.05;
+}

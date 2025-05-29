@@ -1,0 +1,24 @@
+/*
+ Darkmode for Tyler's Stuff Map Darkmode
+*/
+body.dark-mode .leaflet-layer,
+body.dark-mode .leaflet-control-zoom-in,
+body.dark-mode .leaflet-control-zoom-out,
+body.dark-mode .leaflet-control-attribution
+{
+	filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%) !important;
+}
+
+body.dark-mode .leaflet-control-zoom-in,
+body.dark-mode .leaflet-control-zoom-out,
+body.dark-mode .leaflet-control-attribution
+{
+	background-color: var(--dark-purple);
+	color: white;
+	opacity: 1;
+}
+
+body.dark-mode .leaflet-container
+{
+	background: #555555;
+}

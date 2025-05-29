@@ -1,103 +1,98 @@
-import Image from "next/image";
+import '@/app/index.css';
+import {Button, buttonVariants} from "@/components/ui/button";
+import Link from "next/link";
+import WordCloud from "@/components/graphical/WordCloud/WordCloud";
+import Image from 'next/image';
+import { Separator } from "@/components/ui/separator";
+
+
+
+const listOfWords = ["HTML", "CSS", "JavaScript", "PHP", "C++", "MySQL", "React.js", "C", "Git", "AWS", "RestAPIs"];
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+      <>
+        <header id="heroHeader" className="relative h-screen overflow-hidden">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <div className="relative flex items-center justify-center h-full w-full" id="welcome">
+
+
+            <div className="absolute text-white! text-left top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 px-4">
+              <h1 className="text-8xl text-white! mb-2">Hello!,<br/> I am <strong>Sean</strong>!</h1>
+              <h2 className="text-3xl text-white! mb-2">A Graduate Computer Scientist, Web Developer, & Problem Solver</h2>
+              <p className="text-3xl mb-4">Crafting clean, efficient, and user-focused web experiences.</p>
+              <Button size={"xxxl"} asChild>
+                <Link href="#about">Learn More</Link>
+              </Button>
+            </div>
+
+          </div>
+
+        </header>
+
+          <Separator></Separator>
+        <main style = {{backgroundColor: '#301168'}}>
+          <section id = "about" className = "flex flex-col md:flex-row lg:max-w-2/3 mx-auto items-center gap-8">
+
+              <div className="flex min-w-min min-h-min h-full w-full max-w-2/6 justify-center items-center">
+                <Image alt = "Sean's headshot" src="/assets/images/homepage/headshot.jpg" width={400} height={400} className="rounded-lg shadow-lg max-w-full h-auto"/>
+              </div>
+              <div className="min-w-min min-h-min h-full max-w-3/5 w-full justify-center items-center">
+                <h2 className="text-4xl">About Me</h2>
+                <p>I'm a studying web developer with a passion for creating simplistic and functional
+                  websites. I enjoy tackling complex challenges and turning them into intuitive user
+                  experiences.</p>
+                <p>When I'm not coding, you can find me watching horror movies, hiking local mountains, or
+                  crafting a Dungeons and Dragons Campaign.</p> <br/>
+                  <Link href = "/pages/experience" legacyBehavior passHref>
+                      <a className={buttonVariants({variant: "default", size: "xxl"})}>View Resume
+                          <i className = "fa-solid fa-forward btn-pointer"></i></a>
+                  </Link>
+              </div>
+          </section>
+
+
+
+          <section  className=" flex flex-col sm:flex-row justify-center lg:max-w-2/3 max-w-fit min-w-[100%] h-min mx-auto" id = "skills">
+
+            <div className="w-1/3 p-10">
+              <h2>Skills</h2>
+              <p>I'm a web developer with a passion for creating simplistic and functional
+                websites. I enjoy tackling complex challenges and turning them into intuitive user
+                experiences. Training at Clemson and Internships prepared me to help you!</p>
+            </div>
+
+            <div className="min-w-min min-h-min size-full max-w-1/3">
+              <WordCloud listOfWords={listOfWords}/>
+            </div>
+
+
+          </section>
+
+
+
+          <section className="flex flex-col min-h-[33vh] text-center justify-center mx-auto" id = "contact">
+              <h2 className="text-4xl mx-auto">Contact</h2>
+              <p className="text-2xl mt-4">Let&#39;s connect and discuss your next project.</p>
+
+              <ul>
+                <li>
+                  <a href = "mailto:site@seanslaughter.dev" className={buttonVariants({variant: "default", size: "xxl"})}><i className = "fas fa-envelope"></i> Email
+                  </a>
+                </li>
+                <li>
+                  <a href = "https://github.com/stslaug" className={buttonVariants({variant: "default", size: "xxl"})} target = "_blank">
+                    <i className = "fab fa-github"></i> GitHub</a>
+                </li>
+                <li>
+                  <Link className={buttonVariants({variant: "default", size: "xxl"})} href = "https://www.linkedin.com/in/stslaug" target = "_blank"><i className = "fab fa-linkedin"></i> LinkedIn</Link>
+                </li>
+              </ul>
+
+          </section>
+        </main>
+
+      </>
   );
 }

@@ -1,0 +1,219 @@
+/* Hero Section */
+.hero
+{
+	background-image: linear-gradient(90deg, #4e357f 0%, #5100a8 25%, rebeccapurple 50%, #5100a8 75%, #4e357f 100%);
+	color: white;
+	min-height: 45vh;
+	padding: 4rem 0;
+	text-align: center;
+
+}
+
+#welcome
+{
+	background-image: linear-gradient(180deg, #14003d 0%, #5100a8 75%, #301169 100%);
+}
+.hero h1
+{
+	font-size: 3rem;
+	margin-bottom: 0.5rem;
+}
+h1, h2, h3, h4, h5, h6
+{
+	color: white !important;
+	color: white !important;
+}
+
+/* About Section */
+#about
+{
+	gap: 1rem;
+	padding: 4rem 0;
+	color: white;
+}
+
+#about img
+{
+	align-self: center;
+	border: 1px solid rgba(255, 255, 255, 1);
+	border-radius: 50%;
+	display: flex;
+	height: auto;
+	justify-self: center;
+	max-width: 400px;
+	min-width: 250px;
+}
+
+/* Skills Section */
+#skills
+{
+	color: white;
+	background-color: rgba(255, 255, 255, 0.05);
+	padding: 4rem 0;
+}
+#skills h2
+{
+	font-size: 2.5rem;
+}
+
+@keyframes subtle-bounce
+{
+	0%, 100%
+	{
+		transform: translateY(0);
+	}
+	50%
+	{
+		transform: translateY(-5px);
+	}
+}
+#contact
+{
+	color: white;
+}
+
+#contact ul
+{
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	margin: 2rem 0;
+	padding: 0;
+}
+
+#contact li
+{
+	margin: 0 1rem;
+}
+
+
+
+#contact li:hover
+{
+	transform: scale(1.05);
+}
+
+/*
+ *
+ *  Button
+ *
+ */
+.fa-forward
+{
+	align-self: center;
+	animation: point 5s ease-in-out infinite alternate;
+	margin: auto auto auto 0.5rem;
+	position: relative;
+	transition: transform 0.5s;
+}
+
+@keyframes point
+{
+	0%, 100%
+	{
+		transform: translate(0, 1px);
+	}
+	50%
+	{
+		transform: translate(0.3rem, 1px);
+	}
+}
+
+@media (max-width: 767px)
+{
+	#about
+	{
+		max-height: min-content !important;
+		min-height: min-content !important;
+		padding: 2rem;
+	}
+
+
+	#about img
+	{
+		margin: 0;
+	}
+}
+
+@media (max-width: 600px)
+{
+	#about img
+	{
+		max-width: 200px;
+	}
+
+
+	#contact .container ul
+	{
+		display: block;
+	}
+
+
+	#contact .container li
+	{
+		margin: 3rem auto;
+	}
+}
+
+/*
+ Dark Mode Settings
+
+ */
+body.dark-mode
+{
+	background-color: var(--deep-purple);
+	color: white;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6
+{
+	color: var(--yellow);
+}
+
+body.dark-mode .special-text
+{
+	color: var(--purple);
+}
+
+body.dark-mode .hero
+{
+	color: var(--yellow);
+}
+
+body.dark-mode #about
+{
+	background-color: var(--deep-purple);
+}
+
+body.dark-mode #skills
+{
+	background-color: #342d45;
+}
+
+body.dark-mode .skill-card
+{
+	background-color: indigo;
+	box-shadow: 0 0 2rem 0.1rem rgba(255, 255, 255, 0.1);
+	color: white;
+}
+
+body.dark-mode #skills h3, body.dark-mode #skills p, body.dark-mode #skills i
+{
+	color: #c6c6c6;
+}
+
+body.dark-mode #skills .skill-card:hover
+{
+	border-color: var(--yellow);
+	box-shadow: 0 0 2rem 0.1rem rgba(244, 208, 29, 0.29);
+}
+
+body.dark-mode #skills .skill-card:hover h3, body.dark-mode #skills .skill-card:hover i, body.dark-mode #skills .skill-card:hover p
+{
+	color: var(--yellow);
+}

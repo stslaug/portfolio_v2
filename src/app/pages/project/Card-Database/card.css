@@ -1,0 +1,141 @@
+html
+{
+	height: 100% !important;
+	min-height: min-content !important;
+}
+
+.cardBody .container
+{
+	display: flex;
+	max-width: 100%;
+}
+
+button.btn:hover, button.btn:active
+{
+	transform: scale(1.00) translateY(0px);
+}
+
+.cardBody .btn[type="submit"]
+{
+	background-color: var(--purple);
+	color: white;
+	font-weight: bold;
+	margin: 10px auto;
+	width: 100%;
+}
+
+body.cardBody.dark-mode .btn[type="submit"]
+{
+	background-color: white;
+	color: var(--dark-purple);
+	font-weight: bold;
+}
+
+.hidden
+{
+	opacity: 0;
+	visibility: hidden;
+}
+
+#card-viewer
+{
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	margin: 2rem;
+	max-width: calc(100% - 375px);
+	width: 100%;
+}
+
+#card-viewer .card-wrapper
+{
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: var(--curve);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 300px;
+	padding: 1rem;
+	position: relative;
+	text-align: center;
+}
+
+#card-viewer .card-wrapper img
+{
+	border-radius: var(--curve);
+	max-width: 250px;
+	transition: transform 0.3s ease-in-out;
+}
+
+#card-viewer .card-wrapper img:hover, #card-viewer .card-wrapper img:focus
+{
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+#card-viewer .card-wrapper .card-info h4
+{
+	margin-bottom: 0.5rem;
+}
+
+.fav-btn
+{
+	border-radius: 4px;
+	padding: 4px;
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	z-index: 10;
+}
+
+.fav-btn .fav
+{
+	display: none;
+}
+
+.fav-btn label
+{
+	transition: transform 0.3s ease-in-out;
+}
+
+.fav-btn label:hover
+{
+	transform: scale(1.1);
+}
+
+.fav-btn .fav + label
+{
+	cursor: pointer;
+	font-size: 24px;
+	position: relative;
+}
+
+/* Regular star (unchecked) */
+.fav-btn .fav + label::before
+{
+	content: "\f005"; /* The star glyph in Font Awesome */
+	display: inline-block;
+	font-family: "Font Awesome 6 Free";
+	font-weight: 400; /* fa-regular star */
+	speak: none;
+}
+
+/* Solid star (checked) */
+.fav-btn .fav:checked + label::before
+{
+	content: "\f005";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900; /* fa-solid star */
+}
+
+@media screen and (max-width: 1000px)
+{
+	.page#card-viewer
+	{
+		margin: 0;
+		max-width: 100%;
+		min-width: 100%;
+		width: 100%;
+	}
+}

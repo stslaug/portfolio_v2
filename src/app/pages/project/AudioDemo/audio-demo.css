@@ -1,0 +1,200 @@
+main
+{
+	display: flex;
+}
+
+/*
+	Audio Controls
+
+ */
+#interactable
+{
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	height: auto;
+	left: 2rem;
+	position: sticky;
+	top: 3rem; /* Distance from the top of the page since sticky */
+}
+
+#title-controls
+{
+	align-items: center;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	text-align: center;
+}
+
+#time-controls
+{
+	justify-content: center;
+	margin: auto;
+	text-align: center;
+}
+
+#time-controls input
+{
+	width: 70%;
+}
+
+#volume-controls
+{
+	text-align: center;
+	text-wrap: nowrap;
+}
+
+/*
+ Title Creation
+ */
+#titleCreate .btn
+{
+	margin-bottom: 0.5rem;
+	width: 100%;
+}
+
+#timestamp /* timestamp slider */
+{
+	margin: 10px 0;
+	width: 80%;
+}
+
+/*
+	Title Table
+
+/*/
+#titleCount
+{
+	display: flex;
+	font-size: 1.2rem;
+	position: absolute;
+	right: 5rem;
+	text-align: center;
+	top: -2rem;
+}
+
+#titles th, #titles td
+{
+	margin: 5rem;
+	padding: 1.5rem;
+	text-wrap: nowrap;
+}
+
+#titles tbody
+{
+}
+
+#titles tbody tr td:first-child
+{
+	text-align: left;
+}
+
+.title-column
+{ /* Title Column */
+	hyphens: auto;
+	max-width: 30vw;
+	overflow: hidden;
+	text-overflow: fade;
+	white-space: normal;
+	word-wrap: break-word;
+}
+
+.time-column
+{ /* Timestamp Column */
+	width: 10%;
+}
+
+thead th:nth-child(3)
+{ /* Controls Column */
+	width: 17%;
+}
+
+#titles.controls
+{
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+}
+
+.fa-pause, .fa-play, .fa-trash, .fa-clock-rotate-left
+{
+	cursor: pointer;
+	transition: all ease-in-out 0.2s;
+}
+
+/*
+	Dark Mode Settings
+ */
+body.dark-mode #titles .bubble-container, body.dark-mode #functions, body.dark-mode #titleCreate
+{
+	background-color: var(--deep-purple);
+}
+
+body.dark-mode main
+{
+	background-color: var(--dark-purple);
+}
+
+/*
+	Mobile/Tablet
+ */
+@media screen and (max-width: 1000px)
+{
+	main
+	{
+		align-content: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 1.5rem;
+		position: static;
+	}
+
+
+	#functions, #titleCreate, #titles, #interactable
+	{
+		display: block;
+		margin: auto;
+		min-width: 100%;
+		position: static;
+		width: 100%;
+	}
+
+
+	#titles .time-column
+	{
+		margin: 0;
+		max-width: 75px;
+		padding: 0;
+	}
+
+
+	#titles
+	{
+		height: auto;
+		margin: 2rem auto;
+	}
+}
+
+@media screen and (max-width: 700px)
+{
+	main
+	{
+		padding: 0;
+	}
+
+
+	#titles i, .title-column, .time-column
+	{
+		font-size: 1rem;
+	}
+
+
+	#titles table, #titles, #titles .bubble-container
+	{
+		padding: 0.5rem;
+	}
+}
+
+
