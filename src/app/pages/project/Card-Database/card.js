@@ -221,7 +221,7 @@ jQuery(function () {
                     $cardViewer.html('<tr><td colspan="6" style="text-align: center;">No cards found matching your criteria.</td></tr>');
                 }
             }, error: function (error) {
-                showError('Error retrieving cards. Are you sure the card you are looking for exists?');
+                showError('Error retrieving cards. Are you sure the card you are looking for exists? ' + error );
             }, complete: function () {
                 // Enable search button after 2 seconds
                 timeoutID = setTimeout(function () {

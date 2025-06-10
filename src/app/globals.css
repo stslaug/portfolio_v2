@@ -45,8 +45,8 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #14003d;
-  --foreground: oklch(0.141 0.005 285.823);
+  --background: #0f0026;
+  --foreground: oklch(0.941 0.005 285.823);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
@@ -80,7 +80,7 @@
 
 .dark {
   --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.985 0 0);
+  --foreground: oklch(0.805 0 0);
   --card: oklch(0.21 0.006 285.885);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.21 0.006 285.885);
@@ -119,4 +119,11 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@theme {
+
+  --breakpoint-3xl: 120rem;
+  --breakpoint-4xl: 140rem;
+  --breakpoint-5xl: 160rem;
 }

@@ -11,11 +11,7 @@ import {
 
 
 const projects = [
-    {
-        name: "Audio Demo",
-        to: "/pages/project/AudioDemo/"
-    },
-    {
+      {
         name: "Card Database",
         to: "/pages/project/Card-Database/card-home.php"
     },
@@ -23,13 +19,13 @@ const projects = [
         name: "Most Likely To",
         to: "/pages/project/Project/index.php"
     },
-    {
-        name: "Zipcode Finder",
-        to: "/pages/group/zipcode/zipcode.html"
-    },
+    // { todo: add back in zipcode finder
+    //     name: "Zipcode Finder",
+    //     to: "/pages/project/zipcode/"
+    // },
     {
         name: "Sort Demo",
-        to: "/pages/solo/Sort/sort.html"
+        to: "/pages/project/Sort/"
     }
 
 ]
@@ -42,10 +38,10 @@ import Link from "next/link";
 
 function NavBar() {
     return (
-        <div id = "mynav" className = "bg-[#14003d] w-full flex mx-auto  relative">
-            <p className = "mr-auto !text-white !text-2xl ml-5">Sean Slaughter</p>
-            <div className = "relative justify-center">
-                <NavigationMenu className = "w-full flex relative" viewport = {false}>
+        <div id="mynav" className="bg-[#0f0026] w-full flex mx-auto relative">
+            <p className="mr-auto !text-white !text-2xl ml-5">Sean Slaughter</p>
+            <div className="relative justify-center flex-1 flex justify-end mr-5">
+                <NavigationMenu className="w-auto flex relative" viewport={false}>
                     <NavigationMenuList>
 
                         <NavigationMenuItem>

@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
     // DOM Element References
     const createTitleForm = document.getElementById("createTitle");
     const newTitleInput = document.getElementById("newTitle");
@@ -287,4 +286,3 @@ document.addEventListener('DOMContentLoaded', function () {
     $('#fwdBtn').on('click', function () {
         jumpToTime(audio.currentTime + 5);
     });
-});

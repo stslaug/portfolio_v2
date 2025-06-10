@@ -27,12 +27,15 @@ export default function RootLayout({
 }>) {
     return (
         <>
-            <html lang = "en">
+            <html className="scroll-smooth" lang = "en">
             <head>
                 <meta charSet = "utf-8"/>
                 <meta content = "width=device-width, initial-scale=1, shrink-to-fit=no" name = "viewport"/>
                 <meta content = "ie=edge" httpEquiv = "X-UA-Compatible"/>
                 <link crossOrigin = "anonymous" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity = "sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" referrerPolicy = "no-referrer" rel = "stylesheet"/>
+
+                <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
 
             </head>
             <body className = {`${notoSans.variable} ${notoMono.variable} antialiased`}

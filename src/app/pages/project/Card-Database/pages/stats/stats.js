@@ -28,7 +28,7 @@ jQuery(function () {
     }
 
     //Doesn't generate, but displays the statistics
-    function displayStatistics(container, sets, totalCards, artists, words, cardTypes, artifactTypes, battleTypes, creatureTypes, enchantmentTypes, landTypes, planeswalkerTypes, spellTypes) {
+    function displayStatistics(container, sets, totalCards, artists, words, cardTypes, artifactTypes, battleTypes, creatureTypes, enchantmentTypes, landTypes, planeswalkerTypes) {
 
         // Build statistics HTML
         const html = `
