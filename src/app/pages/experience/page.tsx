@@ -129,22 +129,24 @@ export default function Experience() {
 
                                 <li><strong className={"mr-1"}>Languages:</strong>
                                     <strong className="skill">Java</strong>
-                                    <strong className="skill">C</strong>
-                                    <strong className="skill">C++</strong>
+                                    <strong className="skill">C / C++</strong>
                                     <strong className="skill">C#</strong>
                                     <strong className="skill">HTML/CSS</strong>{/* Note: &nbsp; only affects spaces. Breaking at '/' is browser-dependent. CSS 'white-space: nowrap;' is more robust for such cases. */}
                                     <strong className="skill">JavaScript</strong>
                                     <strong className="skill">PHP</strong></li>
-
+                                <li>
+                                    <strong className={"mr-1"}>Web&nbsp;Frameworks:</strong>
+                                    <strong className="skill">React</strong>
+                                    <strong className="skill">jQuery</strong>
+                                    <strong className="skill">TailwindCSS</strong>
+                                </li>
                                 <li><strong className={"mr-1"}>Tools:</strong>
                                     <strong className="skill">Atlassian&nbsp;Jira</strong>
                                     <strong className="skill">Confluence</strong>
                                     <strong className="skill">GIT</strong>
                                     <strong className="skill">ServiceNow</strong>
                                     <strong className="skill">Google&nbsp;Tool&nbsp;Suite</strong>
-                                    <strong className="skill">Visual&nbsp;Studio</strong>
-                                    <strong className="skill">JetBrains&nbsp;Suite</strong>
-                                    <strong className="skill">Spring&nbsp;Tools</strong>
+                                    <strong className="skill">Spring&nbsp;Tool&nbsp;Suite</strong>
                                 </li>
 
                                 <li><strong className={"mr-1"}>Workplace Skills:</strong>
