@@ -60,7 +60,7 @@ function NavBar() {
 
                         <NavigationMenuItem>
                             <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
-                            <NavigationMenuContent>
+                            <NavigationMenuContent className={"absolute min-w-min"}>
                                 {projects.map((project, index) => (
                                     <Link key = {index} href = {project.to} legacyBehavior passHref>
                                         <NavigationMenuLink title = {project.name}>

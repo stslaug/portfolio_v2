@@ -90,7 +90,9 @@ export default function Experience() {
             }} animate = {{x: "0px"}} transition = {{duration: 1.00, type: "ease-in-out"}} id = "head"
             >
                 <div className = "fixed sticky h-full w-full">
+
                     <div className = {" h-min w-full text-foreground"}>
+
                         <div className = "md:flex md:flex-col flex-row flex">
                             <Image alt = "Sean's headshot" src = "/assets/images/homepage/headshot_sqr.jpg" width = {300} height = {300} className = "rounded-lg md:justify-center  mt-3 mx-auto max-md:w-[150px] max-md:h-[150px] w-full  md:max-w-3/4 shadow-lg"/>
                             <div className = "flex flex-col justify-center max-md:text-center w-full ml-5 ">

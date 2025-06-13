@@ -22,7 +22,7 @@ export default function Home() {
                         type: "spring"
                     }} whileHover = {{scale: 1.05}} whileInView = {{scale: 1, opacity: 1, translateY: 0}}
                     >
-                        <h1 className = "!text-8xl text-white! mb-2">Hello!,<br/> I am <strong>Sean</strong>!</h1>
+                        <h1 className = "!text-8xl text-white! mb-2">Hello!,<br/> I<span className={"max-lg:hidden"}>'m</span> <span className={"lg:hidden"}>am</span> <strong>Sean</strong>!</h1>
                         <h2 className = "!text-3xl text-white! mb-2">A Graduate Computer Scientist, Web Developer, & Problem Solver</h2>
                         <p className = "text-3xl mb-4">Crafting clean, efficient, and user-focused web experiences.</p>
                         <Button size = {"xxxl"} asChild>
@@ -33,25 +33,33 @@ export default function Home() {
 
             </header>
 
-            <main style = {{backgroundColor: '#0f0026'}}>
-                <section id = "about" className = "flex flex-col md:flex-row lg:max-w-2/3 mx-auto items-center gap-8">
+            <main style = {{backgroundColor: '#0f0026'}} className={"overflow-x-hidden"}>
+                <div className={"about-me-oval-wrap w-full min-w-full h-[50vh] min-h-[650px] max-w-full"}> {/* Added for Ovals...*/}
+
+                    <div id="oval1" className={"oval"}></div>
+                    <div id="oval2" className={"oval"}></div>
+
+                    <section id = "about" className = " relative z-10 flex flex-col md:flex-row lg:max-w-2/3 w-min mx-auto items-center gap-8">
 
                     <div className = "flex min-w-min min-h-min h-full w-full max-w-2/6 justify-center items-center">
-                        <Image alt = "Sean's headshot" src = "/assets/images/homepage/headshot.jpg" width = {400} height = {400} className = "rounded-lg shadow-lg max-w-full h-auto"/>
+                        <Image alt = "Sean's headshot" src = "/assets/images/homepage/headshot.jpg" width = {400} height = {400}
+                            className = "rounded-lg shadow-lg max-w-full h-auto"/>
                     </div>
-                    <div className = "min-w-min min-h-min h-full max-w-3/5 w-full justify-center items-center">
+                    <div className = " 2xl:min-w-[700px] xl:min-w-[500px] lg:min-w-[400px] min-w-[400px] text-wrap min-h-min h-full max-w-3/5 w-full justify-center items-center">
                         <h2 className = "text-4xl">About Me</h2>
                         <p>I&#39;m a studying web developer with a passion for creating simplistic and functional
                             websites. I enjoy tackling complex challenges and turning them into intuitive user
+                            websites. I enjoy tackling complex challenges and turning them into intuitive user
                             experiences.</p>
-                        <p>When I&#39;m not coding, you can find me watching horror movies, hiking local mountains, or
-                            crafting a Dungeons and Dragons Campaign.</p> <br/>
+                        <p>I enjoy debating philosophy, playing board games, and watching horror movies. </p> <br/>
                         <Link href = "/pages/experience" legacyBehavior passHref>
                             <a className = {buttonVariants({variant: "default", size: "xxl"})}>View Resume
                                 <i className = "fa-solid fa-forward btn-pointer"></i></a>
                         </Link>
                     </div>
                 </section>
+
+                </div>
 
                 <section className = "flex flex-col justify-center max-w-full min-w-full h-min mx-auto" id = "skills">
 

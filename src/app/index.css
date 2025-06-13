@@ -1,4 +1,7 @@
-
+html
+{
+	overflow-x: hidden;
+}
 #welcome
 {
 	background-image: linear-gradient(180deg, #0f0026 0%, #371062 45%, #0f0026 100%);
@@ -24,7 +27,7 @@ h1, h2, h3, h4, h5, h6
 #about img
 {
 	align-self: center;
-	border: 1px solid rgba(255, 255, 255, 1);
+
 	border-radius: 50%;
 	display: flex;
 	height: auto;
@@ -84,6 +87,122 @@ h1, h2, h3, h4, h5, h6
 	transform: scale(1.05);
 }
 
+
+
+
+
+.oval
+{
+	position: absolute;
+	margin: auto;
+	width: 625px;
+	height: 800px;
+	opacity: 50%;
+	border-radius: 50%;
+	transition: all 0.5s ease-in-out;
+
+}
+#oval1
+{
+	transform: rotate(45deg);
+	scale: 1.2;
+	background-color: #6c03ce;
+	opacity: 25%;
+	left: 40%;
+	top: 90%;
+
+
+}
+#oval2
+{
+	scale: 0.9;
+	left: 10%;
+	background-color: purple;
+	transform: rotate(110deg);
+}
+
+.about-me-oval-wrap
+{
+	display: block;
+	min-height: min-content;
+}
+
+@media screen and (max-width: 999px)
+{
+	.about-me-oval-wrap
+	{
+		display: block;
+		min-height: min-content;
+	}
+	#oval1
+	{
+		scale: 1;
+		top: 105%;
+		left: 15%;
+	}
+	#oval2
+	{
+		scale: 1;
+		left: 0%;
+		top: 95%;
+
+	}
+}
+@media screen and (min-width: 1000px)
+{
+
+	#oval1
+	{
+		scale: 1.2;
+		left: 40%;
+
+	}
+	#oval2{
+		scale: 1;
+		top: 90%;
+		left: 20%;
+	}
+}
+@media screen and (min-width: 2000px)
+{
+
+	.oval
+	{
+		width: 700px;
+		height: 905px;
+	}
+	#oval1
+	{
+		scale: 1.2;
+		left: 40%;
+	}
+	#oval2
+	{
+		scale: 1.1;
+		left: 30%;
+		top: 90%;
+	}
+}
+@media screen and (min-width: 3000px) {
+	.oval
+	{
+		width: 700px;
+		height: 905px;
+
+	}
+	#oval1
+	{
+		scale: 1.2;
+		left: 50%;
+	}
+	#oval2
+	{
+		scale: 1.1;
+		left: 30%;
+		top: 90%;
+	}
+
+}
 /*
  *
  *  Button
@@ -110,7 +229,7 @@ h1, h2, h3, h4, h5, h6
 	}
 }
 
-@media (max-width: 767px)
+@media (max-width: 800px)
 {
 	#about
 	{
