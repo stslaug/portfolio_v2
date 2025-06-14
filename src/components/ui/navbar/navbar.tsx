@@ -57,21 +57,26 @@ function NavBar() {
                                 </NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>
-
                         <NavigationMenuItem>
-                            <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
-                            <NavigationMenuContent className={"absolute min-w-min"}>
-                                {projects.map((project, index) => (
-                                    <Link key = {index} href = {project.to} legacyBehavior passHref>
-                                        <NavigationMenuLink title = {project.name}>
-                                            {project.name}
-                                        </NavigationMenuLink>
-                                    </Link>
-
-                                ))}
-
-                            </NavigationMenuContent>
+                            <Link href = "https://seanslaughter.dev/" legacyBehavior passHref>
+                                <NavigationMenuLink className = {navigationMenuTriggerStyle()}>
+                                    Back to Main
+                                </NavigationMenuLink>
+                            </Link>
                         </NavigationMenuItem>
+                        {/*<NavigationMenuItem>*/}
+                        {/*    <NavigationMenuTrigger>Projects</NavigationMenuTrigger>*/}
+                        {/*    <NavigationMenuContent className={"absolute min-w-min"}>*/}
+                        {/*        {projects.map((project, index) => (*/}
+                        {/*            <Link key = {index} href = {project.to} legacyBehavior passHref>*/}
+                        {/*                <NavigationMenuLink title = {project.name}>*/}
+                        {/*                    {project.name}*/}
+                        {/*                </NavigationMenuLink>*/}
+                        {/*            </Link>*/}
+
+                        {/*        ))}*/}
+                        {/*    </NavigationMenuContent>*/}
+                        {/*</NavigationMenuItem>*/}
                     </NavigationMenuList>
                 </NavigationMenu>
             </div>
