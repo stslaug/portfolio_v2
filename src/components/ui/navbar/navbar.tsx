@@ -2,33 +2,32 @@
 import "./navbar.css";
 import {
     NavigationMenu,
-    NavigationMenuContent,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
-    NavigationMenuTrigger, navigationMenuTriggerStyle,
+    navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
 
-const projects = [
-      {
-        name: "Card Database",
-        to: "/pages/project/Card-Database/card-home.php"
-    },
-    {
-        name: "Most Likely To",
-        to: "/pages/project/Project/index.php"
-    },
-    // { todo: add back in zipcode finder
-    //     name: "Zipcode Finder",
-    //     to: "/pages/project/zipcode/"
-    // },
-    {
-        name: "Sort Demo",
-        to: "/pages/project/Sort/"
-    }
-
-]
+// const projects = [
+//       {
+//         name: "Card Database",
+//         to: "/pages/project/Card-Database/card-home.php"
+//     },
+//     {
+//         name: "Most Likely To",
+//         to: "/pages/project/Project/index.php"
+//     },
+//     // { todo: add back in zipcode finder
+//     //     name: "Zipcode Finder",
+//     //     to: "/pages/project/zipcode/"
+//     // },
+//     {
+//         name: "Sort Demo",
+//         to: "/pages/project/Sort/"
+//     }
+//
+// ]
 
 
 
@@ -58,7 +57,7 @@ function NavBar() {
                             </Link>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <Link href = "https://seanslaughter.dev/" legacyBehavior passHref>
+                            <Link href = "https://seanslaughter.dev" legacyBehavior passHref>
                                 <NavigationMenuLink className = {navigationMenuTriggerStyle()}>
                                     Back to Main
                                 </NavigationMenuLink>

@@ -1,16 +1,14 @@
-html
-{
-	overflow-x: hidden;
-}
 #welcome
 {
 	background-image: linear-gradient(180deg, #0f0026 0%, #371062 45%, #0f0026 100%);
 }
+
 .hero h1
 {
 	font-size: 3rem;
 	margin-bottom: 0.5rem;
 }
+
 h1, h2, h3, h4, h5, h6
 {
 	color: white !important;
@@ -20,14 +18,19 @@ h1, h2, h3, h4, h5, h6
 #about
 {
 	gap: 1rem;
-	padding: 4rem 0;
 	color: white;
+	padding: 4rem 0 6rem;
+	margin: 6rem auto 6rem;
+}
+@media (max-width: 767px) {
+	#about{
+ 		padding: 0 0.4rem;
+	}
 }
 
 #about img
 {
 	align-self: center;
-
 	border-radius: 50%;
 	display: flex;
 	height: auto;
@@ -45,6 +48,7 @@ h1, h2, h3, h4, h5, h6
 	padding: 4rem 0;
 	width: min(100%, 950px);
 }
+
 #skills h2
 {
 	font-size: 2.5rem;
@@ -61,6 +65,7 @@ h1, h2, h3, h4, h5, h6
 		transform: translateY(-5px);
 	}
 }
+
 #contact
 {
 	color: white;
@@ -80,129 +85,112 @@ h1, h2, h3, h4, h5, h6
 	margin: 0 1rem;
 }
 
-
-
 #contact li:hover
 {
 	transform: scale(1.05);
 }
 
-
-
-
-
-.oval
-{
+/* --- Base Styles --- */
+.oval {
+	overflow-x: hidden !important;
 	position: absolute;
 	margin: auto;
 	width: 625px;
 	height: 800px;
 	opacity: 50%;
 	border-radius: 50%;
+	z-index: -1 !important;
 	transition: all 0.5s ease-in-out;
-
 }
-#oval1
-{
-	transform: rotate(45deg);
-	scale: 1.2;
+
+#oval1 {
 	background-color: #6c03ce;
-	opacity: 25%;
-	left: 40%;
-	top: 90%;
-
-
-}
-#oval2
-{
-	scale: 0.9;
 	left: 10%;
+	top: 90%;
+}
+
+#oval2 {
 	background-color: purple;
-	transform: rotate(110deg);
+	left: 10%;
+	top: 95%;
 }
 
-.about-me-oval-wrap
-{
-	display: block;
-	min-height: min-content;
+.about-me-oval-wrap {
+	position: relative;
 }
 
-@media screen and (max-width: 999px)
-{
-	.about-me-oval-wrap
-	{
-		display: block;
-		min-height: min-content;
-	}
-	#oval1
-	{
-		scale: 1;
-		top: 105%;
-		left: 15%;
-	}
-	#oval2
-	{
-		scale: 1;
-		left: 0%;
-		top: 95%;
+/* --- Media Queries --- */
 
-	}
-}
-@media screen and (min-width: 1000px)
-{
-
-	#oval1
-	{
-		scale: 1.2;
-		left: 40%;
-
-	}
-	#oval2{
-		scale: 1;
-		top: 90%;
-		left: 20%;
-	}
-}
-@media screen and (min-width: 2000px)
-{
-
-	.oval
-	{
+/* For very large screens (2500px and wider) */
+@media screen and (min-width: 2500px) {
+	.oval {
 		width: 700px;
-		height: 905px;
-	}
-	#oval1
-	{
-		scale: 1.2;
-		left: 40%;
-	}
-	#oval2
-	{
-		scale: 1.1;
-		left: 30%;
-		top: 90%;
-	}
-}
-@media screen and (min-width: 3000px) {
-	.oval
-	{
-		width: 700px;
-		height: 905px;
-
-	}
-	#oval1
-	{
-		scale: 1.2;
-		left: 50%;
-	}
-	#oval2
-	{
-		scale: 1.1;
-		left: 30%;
-		top: 90%;
+		height: 900px;
 	}
 
+	#oval1 {
+		transform: scale(1.1) translate(5%, -45%) rotate(45deg);
+	}
+
+	#oval2 {
+		transform:translate(-20%, -45%) rotate(90deg);
+	}
 }
+
+/* For standard desktops (1500px to 2499px) */
+@media screen and (max-width: 2499px) and (min-width: 1500px) {
+	#oval1 {
+		transform: scale(1.2) translate(10%, -45%) rotate(60deg);
+	}
+
+	#oval2 {
+		transform:translate(-25%, -45%) rotate(90deg);
+	}
+}
+
+/* For laptops and large tablets (1000px to 1499px) */
+@media screen and (max-width: 1499px) and (min-width: 1051px) {
+	#oval1 {
+		transform: scale(1.2) translate(10%, -45%) rotate(35deg);
+	}
+
+	#oval2 {
+		transform:translate(-25%, -35%) rotate(90deg);
+	}
+}
+
+/* For tablets (600px to 999px) */
+@media screen and (max-width: 1050px) and (min-width: 768px) {
+	#oval1 {
+		transform: scale(1.2) translate(0%, -45%) rotate(35deg);
+	}
+
+	#oval2 {
+		transform:translate(-25%, -35%) rotate(90deg);
+	}
+}
+
+@media screen and (max-width: 767px) and (min-width: 600px) {
+	#oval1 {
+		transform: scale(1.1) translate(-45%, -5%) rotate(35deg);
+	}
+
+	#oval2 {
+		transform: scale(1.1) translate(-50%, -0%) rotate(115deg);
+	}
+}
+
+/* For mobile (599px and narrower) */
+@media screen and (max-width: 599px) {
+	#oval1 {
+		transform: scale(1.1) translate(-45%, -5%) rotate(35deg);
+	}
+
+	#oval2 {
+		transform: scale(1.1) translate(-50%, -0%) rotate(115deg);
+	}
+}
+
 /*
  *
  *  Button
@@ -229,28 +217,8 @@ h1, h2, h3, h4, h5, h6
 	}
 }
 
-@media (max-width: 800px)
-{
-	#about
-	{
-		max-height: min-content !important;
-		min-height: min-content !important;
-		padding: 2rem;
-	}
-
-
-	#about img
-	{
-		margin: 0;
-	}
-}
-
 @media (max-width: 600px)
 {
-	#about img
-	{
-		max-width: 200px;
-	}
 
 
 	#contact .container ul
@@ -263,67 +231,4 @@ h1, h2, h3, h4, h5, h6
 	{
 		margin: 3rem auto;
 	}
-}
-
-/*
- Dark Mode Settings
-
- */
-body.dark-mode
-{
-	background-color: var(--deep-purple);
-	color: white;
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6
-{
-	color: var(--yellow);
-}
-
-body.dark-mode .special-text
-{
-	color: var(--purple);
-}
-
-body.dark-mode .hero
-{
-	color: var(--yellow);
-}
-
-body.dark-mode #about
-{
-	background-color: var(--deep-purple);
-}
-
-body.dark-mode #skills
-{
-	background-color: #342d45;
-}
-
-body.dark-mode .skill-card
-{
-	background-color: indigo;
-	box-shadow: 0 0 2rem 0.1rem rgba(255, 255, 255, 0.1);
-	color: white;
-}
-
-body.dark-mode #skills h3, body.dark-mode #skills p, body.dark-mode #skills i
-{
-	color: #c6c6c6;
-}
-
-body.dark-mode #skills .skill-card:hover
-{
-	border-color: var(--yellow);
-	box-shadow: 0 0 2rem 0.1rem rgba(244, 208, 29, 0.29);
-}
-
-body.dark-mode #skills .skill-card:hover h3, body.dark-mode #skills .skill-card:hover i, body.dark-mode #skills .skill-card:hover p
-{
-	color: var(--yellow);
 }

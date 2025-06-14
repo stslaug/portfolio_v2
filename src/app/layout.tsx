@@ -30,7 +30,7 @@ export default function RootLayout({
             <html className="scroll-smooth" lang = "en">
             <head>
                 <meta charSet = "utf-8"/>
-                <meta content = "width=device-width, initial-scale=1, shrink-to-fit=no" name = "viewport"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta content = "ie=edge" httpEquiv = "X-UA-Compatible"/>
                 <link crossOrigin = "anonymous" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity = "sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" referrerPolicy = "no-referrer" rel = "stylesheet"/>
 
@@ -42,7 +42,7 @@ export default function RootLayout({
             >
                 <NavBar/>
 
-                <main>  {children} </main>
+                <main className = "!overflow-x-hidden">  {children} </main>
 
                 <Footer/>
             </body>
