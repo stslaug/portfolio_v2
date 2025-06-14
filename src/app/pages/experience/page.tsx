@@ -14,8 +14,8 @@ export default function Experience() {
         {
             name: "Magical Gardening Game",
             to: "/pages/group/zipcode/zipcode.html",
-            lang: "C#",
-            tech: "Unity Git",
+            lang: ["C#"],
+            tech: ["Unity", "Git"],
             type: "Team",
             date: "Dec 2024",
             description: "Created a 2D, cozy, high-fantasy, garden-themed game. Implemented core gameplay in C#, integrated assets in Unity, and collaborated on art, music, and story."
@@ -23,8 +23,8 @@ export default function Experience() {
         {
             name: "Most Likely To",
             to: "/pages/project/Project/index.php",
-            tech: "",
-            lang: "PHP, JQuery, HTML, CSS, MySQL",
+            tech: [],
+            lang: ["PHP", "JQuery", "HTML", "CSS", "MySQL"],
             type: "Team",
             date: "May 2025",
             description: "Developed a question and answer platform for friends to vote on the most likely to do the given statments. "
@@ -32,31 +32,26 @@ export default function Experience() {
         {
             name: "Driving Rewards Web App",
             to: "/pages/project/DrivingRewards/index.html",
-            lang: "JavaScript, HTML, CSS, MySQL",
-            tech: "React.js, AWS, Ebay API, Git",
+            lang: ["JavaScript", "HTML", "CSS", "MySQL"],
+            tech: ["React.js", "AWS", "Ebay API", "Git"],
             type: "Team",
             date: "Dec 2024",
             description: "Web platform for organizations to award users points for eBay items. Implemented AWS-backed authentication, secure ordering, and scalable infrastructure."
-
         },
         {
             name: "Card Database",
             to: "/pages/project/Card-Database/card-home.php",
-            lang: "PHP, JavaScript, HTML, CSS, MySQL",
-            tech: "Scryfall API, Git",
+            lang: ["PHP", "JavaScript", "HTML", "CSS", "MySQL"],
+            tech: ["Scryfall API", "Git"],
             type: "Solo",
             date: "May 2025",
-            description: "A web application that allows users to create, view, and manage their " +
-                "own card databases. The application provides a user-friendly interface for creating " +
-                "and managing cards, as well as displaying them in a visually appealing manner. The " +
-                "application also includes features for searching and sorting cards, as well as exporting " +
-                "data to various formats."
+            description: "A web application that allows users to create, view, and manage their own card databases. The application provides a user-friendly interface for creating and managing cards, as well as displaying them in a visually appealing manner. The application also includes features for searching and sorting cards, as well as exporting data to various formats."
         },
         {
             name: "Cute vs. Creepy - Eye Tracking Research",
             to: "/pages/project/EyeTracking/index.html",
-            lang: "Python",
-            tech: "PsychoPy, Git",
+            lang: ["Python"],
+            tech: ["PsychoPy", "Git"],
             type: "Solo",
             date: "Dec 2024",
             description: "Conducted an eye-tracking experiment to assess emotional responses to generated images, analyzing gaze patterns to measure \"cute\" vs. \"creepy.\""
@@ -64,8 +59,8 @@ export default function Experience() {
         {
             name: "Zipcode Finder",
             to: "/pages/group/zipcode/zipcode.html",
-            tech: "Leaflet API",
-            lang: "JavaScript, HTML, CSS",
+            tech: ["Leaflet API"],
+            lang: ["JavaScript", "HTML", "CSS"],
             type: "Team",
             date: "Feb 2025",
             description: "Locates and displays the 'around the globe' distances between zipcodes."
@@ -73,13 +68,13 @@ export default function Experience() {
         {
             name: "Sort Demo",
             to: "/pages/solo/Sort/sort.html",
-            tech: "",
-            lang: "JavaScript, HTML, CSS, MySQL",
+            tech: [],
+            lang: ["JavaScript", "HTML", "CSS", "MySQL"],
             type: "Solo",
             date: "Jan 2025",
             description: "Displays a list and dynamically displays the sorted list based on the user's input."
         }
-    ]
+    ];
 
 
     return (
@@ -93,7 +88,7 @@ export default function Experience() {
 
                     <div className = {" h-min w-full text-foreground"}>
 
-                        <div className = "md:flex md:flex-col flex-row flex">
+                        <div id = "headerAndName" className = "md:flex md:flex-col flex-row flex">
                             <Image alt = "Sean's headshot" src = "/assets/images/homepage/headshot_sqr.jpg" width = {300} height = {300} className = "rounded-lg md:justify-center  mt-3 mx-auto max-md:w-[150px] max-md:h-[150px] w-full  md:max-w-3/4 shadow-lg"/>
                             <div className = "flex flex-col justify-center max-md:text-center w-full ml-5 ">
                                 <h2 className = "title text-nowrap mt-5">Sean Slaughter</h2>
@@ -104,15 +99,15 @@ export default function Experience() {
                                     <p className = "subtitle">Clemson, SC</p>
                                 </div>
                             </div>
-                            <div className = "mt-3 md:w-full justify-center flex md:flex-row flex-col gap-2">
+                            <div id = {"contact-buttons-1"} className = "mt-3 md:w-full justify-center flex md:flex-row flex-col gap-2">
                                 <Button asChild>
-                                    <Link aria-label = "Email stslaug@gmail.com" href = "mailto:stslaug@gmail.com"><i className = "fa-solid fa-envelope"></i></Link>
+                                    <Link aria-label = "Email stslaug@gmail.com" href = "mailto:stslaug@gmail.com"><i className = " fa-xl fa-solid fa-envelope"></i></Link>
                                 </Button>
                                 <Button asChild>
-                                    <Link aria-label = "Visit LinkedIn profile" href = "https://www.linkedin.com/in/stslaug" rel = "noopener noreferrer" target = "_blank"><i className = "fa-brands fa-linkedin"></i></Link>
+                                    <Link aria-label = "Visit LinkedIn profile" href = "https://www.linkedin.com/in/stslaug" rel = "noopener noreferrer" target = "_blank"><i className = "fa-xl fa-brands fa-linkedin"></i></Link>
                                 </Button>
                                 <Button asChild>
-                                    <Link aria-label = "Download Resume PDF" download = "Resume_SSlaughter.pdf" href = "/assets/files/Resume.pdf"><i className = "fa-solid fa-download"></i></Link>
+                                    <Link aria-label = "Download Resume PDF" download = "Resume_SSlaughter.pdf" href = "/assets/files/Resume.pdf"><i className = "fa-xl fa-solid fa-download"></i></Link>
                                 </Button>
 
                             </div>
@@ -122,49 +117,61 @@ export default function Experience() {
                         <h3 className = "title mt-2">Skills</h3>
                         <Separator className = {"mb-2"}/>
                         <div>
-                            <ul className="skillList flex flex-col gap-1 w-full">
-                                <li><strong className={"mr-1"}>Cloud:</strong>
-                                    <strong className="skill">Amazon&nbsp;Web&nbsp;Services</strong>
-                                    <strong className="skill">Soap</strong>
-                                    <strong className="skill">RESTful&nbsp;APIs</strong>
+                            <ul className = "skillList flex flex-col gap-1 w-full">
+                                <li><strong className = {"mr-1"}>Cloud:</strong>
+                                    <strong className = "skill">Amazon&nbsp;Web&nbsp;Services</strong>
+                                    <strong className = "skill">Soap</strong>
+                                    <strong className = "skill">RESTful&nbsp;APIs</strong>
                                 </li>
 
-                                <li><strong className={"mr-1"}>Languages:</strong>
-                                    <strong className="skill">Java</strong>
-                                    <strong className="skill">C / C++</strong>
-                                    <strong className="skill">C#</strong>
-                                    <strong className="skill">HTML/CSS</strong>{/* Note: &nbsp; only affects spaces. Breaking at '/' is browser-dependent. CSS 'white-space: nowrap;' is more robust for such cases. */}
-                                    <strong className="skill">JavaScript</strong>
-                                    <strong className="skill">PHP</strong></li>
+                                <li><strong className = {"mr-1"}>Languages:</strong>
+                                    <strong className = "skill">Java</strong>
+                                    <strong className = "skill">C / C++</strong>
+                                    <strong className = "skill">C#</strong>
+                                    <strong className = "skill">HTML/CSS</strong>{/* Note: &nbsp; only affects spaces. Breaking at '/' is browser-dependent. CSS 'white-space: nowrap;' is more robust for such cases. */}
+                                    <strong className = "skill">JavaScript</strong>
+                                    <strong className = "skill">PHP</strong></li>
                                 <li>
-                                    <strong className={"mr-1"}>Web&nbsp;Frameworks:</strong>
-                                    <strong className="skill">React</strong>
-                                    <strong className="skill">jQuery</strong>
-                                    <strong className="skill">TailwindCSS</strong>
+                                    <strong className = {"mr-1"}>Web&nbsp;Frameworks:</strong>
+                                    <strong className = "skill">React</strong>
+                                    <strong className = "skill">jQuery</strong>
+                                    <strong className = "skill">TailwindCSS</strong>
                                 </li>
-                                <li><strong className={"mr-1"}>Tools:</strong>
-                                    <strong className="skill">Atlassian&nbsp;Jira</strong>
-                                    <strong className="skill">Confluence</strong>
-                                    <strong className="skill">GIT</strong>
-                                    <strong className="skill">ServiceNow</strong>
-                                    <strong className="skill">Google&nbsp;Tool&nbsp;Suite</strong>
-                                    <strong className="skill">Spring&nbsp;Tool&nbsp;Suite</strong>
+                                <li><strong className = {"mr-1"}>Tools:</strong>
+                                    <strong className = "skill">Atlassian&nbsp;Jira</strong>
+                                    <strong className = "skill">Confluence</strong>
+                                    <strong className = "skill">GIT</strong>
+                                    <strong className = "skill">ServiceNow</strong>
+                                    <strong className = "skill">Google&nbsp;Tool&nbsp;Suite</strong>
+                                    <strong className = "skill">Spring&nbsp;Tool&nbsp;Suite</strong>
                                 </li>
 
-                                <li><strong className={"mr-1"}>Workplace Skills:</strong>
-                                    <strong className="skill">Agile&nbsp;Workflow</strong>
-                                    <strong className="skill">Team&nbsp;Management</strong>
-                                    <strong className="skill">Conflict&nbsp;Mediation</strong>
-                                    <strong className="skill">Project&nbsp;Planning</strong>
+                                <li><strong className = {"mr-1"}>Workplace Skills:</strong>
+                                    <strong className = "skill">Agile&nbsp;Workflow</strong>
+                                    <strong className = "skill">Team&nbsp;Management</strong>
+                                    <strong className = "skill">Conflict&nbsp;Mediation</strong>
+                                    <strong className = "skill">Project&nbsp;Planning</strong>
                                 </li>
                             </ul>
+                        </div>
+                        <div id = {"contact-buttons-2"} className = "mt-3  justify-center flex flex-row gap-2">
+                            <Button variant = {"default"} asChild>
+                                <Link aria-label = "Email stslaug@gmail.com" href = "mailto:stslaug@gmail.com"><i className = "fa-solid fa-envelope fa-xl"></i></Link>
+                            </Button>
+                            <Button asChild>
+                                <Link aria-label = "Visit LinkedIn profile" href = "https://www.linkedin.com/in/stslaug" rel = "noopener noreferrer" target = "_blank"><i className = "fa-brands fa-linkedin fa-xl"></i></Link>
+                            </Button>
+                            <Button asChild>
+                                <Link aria-label = "Download Resume PDF" download = "Resume_SSlaughter.pdf" href = "/assets/files/Resume.pdf"><i className = "fa-solid fa-download fa-xl"></i></Link>
+                            </Button>
+
                         </div>
                     </div>
 
                 </div>
             </motion.div>
 
-            <main className = "inline-block pl-20 pr-20 max-w-full md:max-w-3/5 w-full ml-10 snap-proximity snap-y">
+            <main className = "inline-block pl-10 pr-10 sm:pl-20 sm:pr-20 max-w-full md:max-w-3/5 w-full sm:ml-10 snap-proximity snap-y">
                 <div className = "">
                     <h2>Education</h2>
                     <Separator className = {"mb-2"}/>
@@ -202,7 +209,8 @@ export default function Experience() {
                     <section className = "section-wrap snap-center" id = "experience">
                         <section id = "ally" className = {"snap-center mb-5"}>
                             <h3 className = "title">Ally Financial Bank (Charlotte, NC)</h3>
-                            <h4><strong>Intern Software Developer</strong>{/* TODO Make style more consistent with other experience */}
+                            <h4>
+                                <strong>Intern Software Developer</strong>{/* TODO Make style more consistent with other experience */}
                                 <span className = {"ml-5 text-right"}>May 2023 - Aug 2023</span></h4>
                             <ul>
                                 <li>Managed a MySQL database and integrated internal authentication services for secure user access control.</li>
@@ -255,10 +263,24 @@ export default function Experience() {
                                 <h3>{project.name}</h3>
                                 <p>{project.type} Project ({project.date})</p>
                                 <ul>
-                                    <li><strong>Languages:</strong> {project.lang}</li>
-                                    <li><strong>Technologies:</strong> {project.tech}</li>
                                     <li>
-                                        <strong>Description:</strong> {project.description}
+                                        <strong className = "mr-2">Languages:</strong>
+                                        {project.lang.map((language, langIndex) => (
+                                            <strong key = {langIndex} className = "skill">
+                                                {language}
+                                            </strong>
+                                        ))}
+                                    </li>
+                                    <li>
+                                        <strong className = "mr-2">Technologies:</strong>
+                                        {project.tech.map((technology, techIndex) => (
+                                            <strong key = {techIndex} className = "skill"> {/* Consider a different class name if "lang" is too specific */}
+                                                {technology}
+                                            </strong>
+                                        ))}
+                                    </li>
+                                    <li>
+                                        <strong className = "mr-2">Description:</strong> {project.description}
                                     </li>
                                 </ul>
                             </div>

@@ -76,3 +76,26 @@
 	margin: 0 0.5rem;
 }
 
+#contact-buttons-2
+{
+	display: none;
+}
+@media screen and (max-width: 600px)
+{
+	#contact-buttons-1
+	{
+		display: none;
+	}
+	#contact-buttons-2
+	{
+		display: flex;
+	}
+
+}
+@media (max-width: 475px) {
+	#headerAndName
+	{
+		flex-direction: column;
+	}
+
+}
