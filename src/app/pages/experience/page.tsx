@@ -208,10 +208,11 @@ export default function Experience() {
                     <Separator className = {"mb-2"}/>
                     <section className = "section-wrap snap-center" id = "experience">
                         <section id = "ally" className = {"snap-center mb-5"}>
-                            <h3 className = "title">Ally Financial Bank (Charlotte, NC)</h3>
+                            <h3 className = "title">Software Developer Intern </h3>
                             <h4>
-                                <strong>Intern Software Developer</strong>{/* TODO Make style more consistent with other experience */}
-                                <span className = {"ml-5 text-right"}>May 2023 - Aug 2023</span></h4>
+                                <strong>Ally Financial (Charlotte, NC)</strong>{/* TODO Make style more consistent with other experience */}
+                                <span className = {"ml-5 text-right"}>May 2023 - Aug 2023</span>
+                            </h4>
                             <ul>
                                 <li>Managed a MySQL database and integrated internal authentication services for secure user access control.</li>
                                 <li>Deployed Java-Based batch processing services to safely manipulate sensitive data efficiently, reliably.</li>
@@ -227,11 +228,10 @@ export default function Experience() {
                         </section>
 
                         <section id = "clemson" className = {" mb-5"}>
-                            <h3 className = "title snap-center">Clemson Home (Clemson, SC)</h3>
-                            <p>Jan 2021 - Dec 2023</p>
-                            <p>
-                                <strong>Residential Community Leader</strong> (Aug 2023 - Dec 2023)
-                                <br/> (previously Residential Community Mentor) </p>
+                            <h3 className = "title snap-center">Residential Community Leader</h3>
+                            <h4>
+                                <strong>Clemson Home (Clemson, SC)</strong> (Jan 2021 - Dec 2023)
+                            </h4>
                             <ul>
                                 <li>Managed scheduling, planned events, and promoted educational growth for 50+ residents, fostering an inclusive environment.</li>
                                 <li>Resolved staff and student conflicts in collaboration with local law enforcement and behavioral specialists.</li>
@@ -262,39 +262,33 @@ export default function Experience() {
                             <div key = {index} className = "mb-2">
                                 <h3>{project.name}</h3>
                                 <p>{project.type} Project ({project.date})</p>
-                                <ul>
-                                    <li>
+                                <div>
+                                    <p>
                                         <strong className = "mr-2">Languages:</strong>
                                         {project.lang.map((language, langIndex) => (
                                             <strong key = {langIndex} className = "skill">
                                                 {language}
                                             </strong>
                                         ))}
-                                    </li>
-                                    <li>
-                                        <strong className = "mr-2">Technologies:</strong>
-                                        {project.tech.map((technology, techIndex) => (
-                                            <strong key = {techIndex} className = "skill"> {/* Consider a different class name if "lang" is too specific */}
-                                                {technology}
-                                            </strong>
-                                        ))}
-                                    </li>
-                                    <li>
+                                    </p>
+                                    {(project.tech.length > 0) ? (
+                                    <p className ="list-none">
+
+
+                                                <strong className = "mr-2">Technologies:</strong>
+                                                {project.tech.map((technology, techIndex) => (
+                                                    <strong key = {techIndex} className = "skill"> {/* Consider a different class name if "lang" is too specific */}
+                                                        {technology}
+                                                    </strong>
+                                                ))}
+
+                                    </p>) : null}
+                                    <p>
                                         <strong className = "mr-2">Description:</strong> {project.description}
-                                    </li>
-                                </ul>
+                                    </p>
+                                </div>
                             </div>
                         ))}
-
-                        <section className = "project-section">
-                            <h3 className = "title snap-center">Other Projects</h3>
-                            <ul>
-                                <li>Microservice Migration (Java 2023)</li>
-                                <li>Batch Processing Service (Java/MySql 2024)</li>
-                                <li>Connect X (Java 2022)</li>
-                                <li>Mortgage Acceptance Calculator (C 2021)</li>
-                            </ul>
-                        </section>
                     </section>
                 </div>
             </main>

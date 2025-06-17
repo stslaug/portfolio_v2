@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer className = {"mx-auto text-white bg-[#0f0026] flex flex-row p-8"} id = "footer-wrapper">
+        <footer className = {"mx-auto text-white flex flex-row p-8"} id = "footer-wrapper">
             <p className = "mx-auto">Website developed by Sean Tyler Slaughter</p>
 
             <span className = "flex mx-auto flex-row gap-4">
