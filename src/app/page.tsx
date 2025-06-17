@@ -7,6 +7,221 @@ import SkillList from "@/components/graphical/SkillList/SkillList";
 import Image from 'next/image';
 import {motion} from "motion/react";
 
+const skills = [
+    {
+        name: "HTML",
+        src: "/assets/images/homepage/icons8-html-5-logo-100.png",
+        iconClass: "devicon-html5-plain"
+    },
+    {
+        name: "CSS",
+        src: "/assets/images/homepage/css3.svg",
+        iconClass: "devicon-css3-plain"
+    },
+    {
+        name: "JavaScript",
+        src: "/assets/images/homepage/javascript.svg",
+        iconClass: "devicon-javascript-plain"
+    },
+    {
+        name: "PHP",
+        src: "/assets/images/homepage/php.svg",
+        iconClass: "devicon-php-plain"
+    },
+    {
+        name: "C++",
+        src: "/assets/images/homepage/c++.svg",
+        iconClass: "devicon-cplusplus-plain"
+    },
+    {
+        name: "Java",
+        src: "/assets/images/homepage/git.svg",
+        iconClass: "devicon-java-plain"
+    },
+    {
+        name: "MySQL",
+        src: "/assets/images/homepage/mysql.svg",
+        iconClass: "devicon-sqldeveloper-plain"
+    },
+    {
+        name: "React.js",
+        src: "/assets/images/homepage/react.svg",
+        iconClass: "devicon-react-plain"
+    },
+    {
+        name: "C Language",
+        src: "/assets/images/homepage/c.svg",
+        iconClass: "devicon-c-line-wordmark"
+    },
+    {
+        name: "Git",
+        iconClass: "devicon-git-plain"
+    },
+    {
+        name: "Tailwind CSS",
+        iconClass: "devicon-tailwindcss-plain"
+    },
+    {
+        name: "Postman",
+        iconClass: "devicon-postman-plain"
+    },
+    {
+        name: "C#",
+        src: "/assets/images/homepage/git.svg",
+        iconClass: "devicon-csharp-plain"
+    },
+    {
+        name: "Python",
+        src: "/assets/images/homepage/git.svg",
+        iconClass: "devicon-python-plain"
+    },
+    {
+        name: "AWS",
+        src: "/assets/images/homepage/aws.svg",
+        iconClass: "devicon-amazonwebservices-plain-wordmark"
+    },
+    {
+        name: "LaTeX",
+        iconClass: "devicon-tex-plain"
+    },
+    {
+        name: "Maven",
+        iconClass: "devicon-maven-plain"
+    },
+    {
+        name: "Restful APIs",
+        src: "/assets/images/homepage/restful-apis.svg",
+        iconClass: "devicon-moleculer-plain"
+    },
+    {
+        name: "Spring",
+        iconClass: "devicon-spring-plain"
+    },
+];
+
+const frontEnd = [
+    {
+        name: "HTML/CSS",
+        src: "/assets/images/homepage/icons/html-css.png", // Placeholder
+        iconClass: "devicon-html5-plain"
+    },
+    {
+        name: "JavaScript",
+        src: "/assets/images/homepage/icons/javascript.png", // Placeholder
+        iconClass: "devicon-javascript-plain"
+    },
+    {
+        name: "React",
+        src: "/assets/images/homepage/icons/react.png", // Placeholder
+        iconClass: "devicon-react-original"
+    },
+    {
+        name: "jQuery",
+        src: "/assets/images/homepage/icons/jquery.png", // Placeholder
+        iconClass: "devicon-jquery-plain"
+    },
+    {
+        name: "Tailwind CSS",
+        src: "/assets/images/homepage/icons/tailwindcss.png", // Placeholder
+        iconClass: "devicon-tailwindcss-plain"
+    },
+];
+
+const backEnd = [
+    {
+        name: "Java",
+        src: "/assets/images/homepage/icons/java.png", // Placeholder
+        iconClass: "devicon-java-plain"
+    },
+    {
+        name: "C / C++",
+        src: "/assets/images/homepage/icons/c-cpp.png", // Placeholder
+        iconClass: "devicon-cplusplus-plain"
+    },
+    {
+        name: "C#",
+        src: "/assets/images/homepage/icons/csharp.png", // Placeholder
+        iconClass: "devicon-csharp-plain"
+    },
+    {
+        name: "PHP",
+        src: "/assets/images/homepage/icons/php.png", // Placeholder
+        iconClass: "devicon-php-plain"
+    },
+    {
+        name: "Spring Tool Suite",
+        src: "/assets/images/homepage/icons/spring-tool-suite.png", // Placeholder
+        iconClass: "devicon-spring-plain" // Closest relevant icon for Spring generally
+    },
+    {
+        name: "RESTful APIs",
+        src: "/assets/images/homepage/icons/rest-api.png", // Placeholder
+        iconClass: "devicon-moleculer-plain" // No direct 'REST' icon, often associated with tools like Postman but for general API concept
+    },
+    {
+        name: "SOAP",
+        src: "/assets/images/homepage/icons/soap.png", // Placeholder
+        iconClass: "devicon-xml-plain" // No widely available standard icon for SOAP
+    },
+];
+
+
+const developmentToolsPlatforms = [
+    {
+        name: "GIT",
+        src: "/assets/images/homepage/icons/git.png", // Placeholder
+        iconClass: "devicon-git-plain"
+    },
+    {
+        name: "Atlassian Jira",
+        src: "/assets/images/homepage/icons/jira.png", // Placeholder
+        iconClass: "devicon-jira-plain"
+    },
+    {
+        name: "Confluence",
+        src: "/assets/images/homepage/icons/confluence.png", // Placeholder
+        iconClass: "devicon-confluence-plain"
+    },
+    {
+        name: "ServiceNow",
+        src: "/assets/images/homepage/icons/servicenow.png", // Placeholder
+        iconClass: "" // No widely available standard icon for ServiceNow
+    },
+    {
+        name: "Google Tool Suite",
+        src: "/assets/images/homepage/icons/google-suite.png", // Placeholder
+        iconClass: "devicon-google-plain" // General Google icon
+    },
+    {
+        name: "AWS",
+        src: "/assets/images/homepage/icons/aws.png", // Placeholder
+        iconClass: "devicon-amazonwebservices-plain"
+    },
+];
+
+const professionalWorkplaceSkills = [
+    {
+        name: "Agile Workflow",
+        src: "/assets/images/homepage/icons/agile.png", // Placeholder
+        iconClass: "" // No widely available standard icon for Agile
+    },
+    {
+        name: "Team Management",
+        src: "/assets/images/homepage/icons/team-management.png", // Placeholder
+        iconClass: ""
+    },
+    {
+        name: "Conflict Mediation",
+        src: "/assets/images/homepage/icons/conflict-mediation.png", // Placeholder
+        iconClass: ""
+    },
+    {
+        name: "Project Planning",
+        src: "/assets/images/homepage/icons/project-planning.png", // Placeholder
+        iconClass: ""
+    },
+];
+
 export default function Home() {
     return (
         <>
@@ -48,8 +263,7 @@ export default function Home() {
                         </div>
                         <div className = " 2xl:min-w-[700px] xl:min-w-[600px] lg:min-w-[500px] min-w-[400px] text-wrap min-h-min h-full max-w-3/5 w-full justify-center items-center">
                             <h2 className = "text-4xl">About Me</h2>
-                            <p>I&#39;m a studying web developer with a passion for creating simplistic and functional
-                                websites. I enjoy tackling complex challenges and turning them into intuitive user
+                            <p>I&#39;m a graduate web developer with a passion for creating. I enjoy tackling complex challenges and turning them into intuitive user
                                 experiences.</p>
                             <p>I enjoy debating philosophy, playing board games, and watching horror movies. </p> <br/>
                             <Link href = "/pages/experience" legacyBehavior passHref>
@@ -67,8 +281,17 @@ export default function Home() {
                         <p>I am a developer who enjoys learning and utilizing multiple different tools and technologies. Here is a list of skills and tools I am experienced with!</p>
                     </div>
 
-                    <div className = "w-full">
-                        <SkillList/>
+                    <div className = " w-full">
+                        <h2 className={"text-center mb-2"}>Front End</h2>
+
+                        <SkillList skills={frontEnd}/>
+                        <h2 className={"text-center mb-2"}>Back End</h2>
+                        <SkillList skills={backEnd}/>
+
+                        <h2 className={"text-center mb-2"}>Development Tool Platforms</h2>
+                        <SkillList skills={developmentToolsPlatforms}/>
+                        <h2 className={"text-center mb-2"}>Professional Workplace Skills</h2>
+                        <SkillList icons={false} skills={professionalWorkplaceSkills}/>
                     </div>
 
                 </section>

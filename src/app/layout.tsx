@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import {Noto_Sans, Noto_Sans_Mono} from "next/font/google";
 import "./globals.css";
-import {NavBar} from "@/components/ui/navbar/navbar";
+import Navbar from "@/components/ui/navbar/Navbar";
 import {Footer} from "@/components/ui/footer";
 
 
@@ -40,7 +40,7 @@ export default function RootLayout({
             </head>
             <body className = {`${notoSans.variable} ${notoMono.variable} antialiased`}
             >
-                <NavBar/>
+                <Navbar/>
 
                 <main className = "!overflow-x-hidden">  {children} </main>
 
