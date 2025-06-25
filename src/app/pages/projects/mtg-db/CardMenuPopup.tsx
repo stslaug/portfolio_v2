@@ -114,7 +114,7 @@ export default function CardMenuPopup({card}: CardMenuPopupProps) {
             <div className={"flex flex-row justify-end mt-5 gap-5"}>
                 <Link className = {buttonVariants({
                     variant: "default"
-                })} href={card.purchase_uris?.tcgplayer} target = "_blank"
+                })} href={card.purchase_uris?.tcgplayer || ""} target = "_blank"
                 >Buy Card ${card.prices?.usd} (USD)</Link>
 
                 <Button variant="default" onClick={() => (setIsOpen(false))}>Close Menu</Button></div>

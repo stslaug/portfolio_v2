@@ -6,7 +6,7 @@ import Image from "next/image";
 import {motion} from "motion/react"
 
 import Link from "next/link";
-
+import headshot_sqr from "../../../../public/assets/images/homepage/headshot_sqr.jpg";
 
 export default function Experience() {
 
@@ -89,7 +89,7 @@ export default function Experience() {
                     <div className = {" h-min w-full text-foreground"}>
 
                         <div id = "headerAndName" className = "md:flex md:flex-col flex-row flex">
-                            <Image alt = "Sean's headshot" src = "/assets/images/homepage/headshot_sqr.jpg" width = {300} height = {300} className = "rounded-lg md:justify-center  mt-3 mx-auto max-md:w-[150px] max-md:h-[150px] w-full  md:max-w-3/4 shadow-lg"/>
+                            <Image alt = "Sean's headshot" src = {headshot_sqr} width = {300} height = {300} className = "rounded-lg md:justify-center  mt-3 mx-auto max-md:w-[150px] max-md:h-[150px] w-full  md:max-w-3/4 shadow-lg"/>
                             <div className = "flex flex-col justify-center max-md:text-center w-full ml-5 ">
                                 <h2 className = "title text-nowrap mt-5">Sean Slaughter</h2>
                                 <Separator className = {" mb-2 md:visible hidden"}/>

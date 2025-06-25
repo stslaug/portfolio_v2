@@ -6,6 +6,7 @@ import Link from "next/link";
 import SkillList from "@/components/graphical/SkillList/SkillList";
 import Image from 'next/image';
 import {motion} from "motion/react";
+import headshot from "../../public/assets/images/homepage/headshot.jpg";
 
 
 //I am iffy on design for this section, but I'm going to leave this here for now
@@ -261,7 +262,7 @@ export default function Home() {
                     </div>
                     <div className = "max-w-full h-full min-h-full flex justify-center items-center gap-8 flex-col">
                         <div className = "flex min-w-min min-h-min h-full w-full max-w-2/6 justify-center items-center">
-                            <Image alt = "Sean's headshot" src = "/assets/images/homepage/headshot.jpg" width = {400} height = {400} className = "rounded-lg shadow-lg max-w-full h-auto"/>
+                            <Image alt = "Sean's headshot" src = {headshot} width = {400} height = {400} className = "rounded-lg shadow-lg max-w-full h-auto"/>
                         </div>
                         <div className = " 2xl:min-w-[700px] xl:min-w-[600px] lg:min-w-[500px] min-w-[400px] text-wrap min-h-min h-full max-w-3/5 w-full justify-center items-center">
                             <h2 className = "text-4xl">About Me</h2>
