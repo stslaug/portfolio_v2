@@ -1,12 +1,12 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/pages/project/AudioDemo/page": "app/pages/project/AudioDemo/page.js",
   "/page": "app/page.js",
   "/pages/experience/page": "app/pages/experience/page.js",
-  "/pages/project/AudioDemo/page": "app/pages/project/AudioDemo/page.js",
   "/pages/project/Sort/page": "app/pages/project/Sort/page.js",
-  "/pages/projects/mtg-db/page": "app/pages/projects/mtg-db/page.js",
   "/pages/projects/mtg-db/pages/about/page": "app/pages/projects/mtg-db/pages/about/page.js",
-  "/pages/projects/mtg-db/pages/stats/page": "app/pages/projects/mtg-db/pages/stats/page.js",
-  "/pages/project/zipcode/page": "app/pages/project/zipcode/page.js"
+  "/pages/project/zipcode/page": "app/pages/project/zipcode/page.js",
+  "/pages/projects/mtg-db/page": "app/pages/projects/mtg-db/page.js",
+  "/pages/projects/mtg-db/pages/stats/page": "app/pages/projects/mtg-db/pages/stats/page.js"
 }
