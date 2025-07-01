@@ -30,7 +30,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/pages/experience": {
+    "/pages/project/AudioDemo": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -43,56 +43,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/pages/experience",
-      "dataRoute": "/pages/experience.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/pages/project/zipcode": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/pages/project/zipcode",
-      "dataRoute": "/pages/project/zipcode.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/pages/projects/mtg-db/pages/about": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/pages/projects/mtg-db/pages/about",
-      "dataRoute": "/pages/projects/mtg-db/pages/about.rsc",
+      "srcRoute": "/pages/project/AudioDemo",
+      "dataRoute": "/pages/project/AudioDemo.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -126,7 +78,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/pages/projects/mtg-db": {
+    "/pages/project/zipcode": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -139,32 +91,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/pages/projects/mtg-db",
-      "dataRoute": "/pages/projects/mtg-db.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/pages/project/AudioDemo": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/pages/project/AudioDemo",
-      "dataRoute": "/pages/project/AudioDemo.rsc",
+      "srcRoute": "/pages/project/zipcode",
+      "dataRoute": "/pages/project/zipcode.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -189,6 +117,78 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/pages/projects/mtg-db/pages/stats",
       "dataRoute": "/pages/projects/mtg-db/pages/stats.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/pages/experience": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/pages/experience",
+      "dataRoute": "/pages/experience.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/pages/projects/mtg-db/pages/about": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/pages/projects/mtg-db/pages/about",
+      "dataRoute": "/pages/projects/mtg-db/pages/about.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/pages/projects/mtg-db": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/pages/projects/mtg-db",
+      "dataRoute": "/pages/projects/mtg-db.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -226,8 +226,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "1b086b548f2a79bcd166a57514668aff",
-    "previewModeSigningKey": "b2766f226275149123c5e14b1929ade5d018df38ac1b60954d28251dfaa66fbc",
-    "previewModeEncryptionKey": "598b374c255051aba917aa623826f7b2932a45b31b12a4d8417bcdc37e558f0c"
+    "previewModeId": "a255b9fa72ce63344fdf6b99c2400446",
+    "previewModeSigningKey": "5f2b8b0db9fae5b1180ba61ecfc0061d24623b8fd3e3ac1ce312572466e92161",
+    "previewModeEncryptionKey": "03f14555c77d64687048542789a4384d940b5e0c1040efb3f660cfc01e68e318"
   }
 }

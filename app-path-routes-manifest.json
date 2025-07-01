@@ -1,12 +1,12 @@
 {
-  "/_not-found/page": "/_not-found",
   "/favicon.ico/route": "/favicon.ico",
-  "/pages/project/AudioDemo/page": "/pages/project/AudioDemo",
+  "/_not-found/page": "/_not-found",
   "/page": "/",
-  "/pages/experience/page": "/pages/experience",
   "/pages/project/Sort/page": "/pages/project/Sort",
-  "/pages/projects/mtg-db/pages/about/page": "/pages/projects/mtg-db/pages/about",
+  "/pages/experience/page": "/pages/experience",
   "/pages/project/zipcode/page": "/pages/project/zipcode",
+  "/pages/project/AudioDemo/page": "/pages/project/AudioDemo",
+  "/pages/projects/mtg-db/pages/about/page": "/pages/projects/mtg-db/pages/about",
   "/pages/projects/mtg-db/page": "/pages/projects/mtg-db",
   "/pages/projects/mtg-db/pages/stats/page": "/pages/projects/mtg-db/pages/stats"
 }
