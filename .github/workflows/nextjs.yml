@@ -82,7 +82,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3 # Uploads the build output for deployment
         with:
-          path: ./out # Path to your Next.js static build output (from output: 'export')
+          path: ./build # Path to your Next.js static build output (from output: 'export')
 
   # Deployment job: Deploys the built artifact to GitHub Pages
   deploy:
