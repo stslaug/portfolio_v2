@@ -14,11 +14,7 @@ import Link from "next/link";
 const projects = [
     {
         name: "Card Database",
-        to: "/pages/projects/mtg-db/"
-    },
-    {
-        name: "Other Projects",
-        to: "https://seanslaughter.dev"
+        to: "/MTG-Card-Finder"
     }
 ]
 
